@@ -1,0 +1,462 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+background:#000;
+color:white;
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.menu a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Configuração Geral do Hero (Fundo e Altura) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url("image/shineray_disa_motos_geral.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0; /* Aumenta o padding para dar mais espaço */
+    min-height: 80vh; /* Banner ocupa boa parte da altura da tela */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    text-align: center; /* Alinhamento à esquerda */
+}
+
+/* Container do conteúdo dentro do Hero */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Alinha os itens à esquerda */
+    width: 100%; /* Ocupa apenas uma parte da largura para não quebrar muito o texto */
+    max-width: 1000px;
+}
+
+/* Título Grande e em Evidência */
+.hero h1 {
+    font-size: 4rem; /* Tamanho grande */
+    font-family: 'Arial', sans-serif; /* Fonte com serifa para o estilo elegante */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -1px; /* Letras mais próximas para um visual moderno */
+    line-height: 1.1;
+}
+
+/* Subtítulo (Texto longo da Imagem 1) */
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente para leitura */
+    align-items: center;
+    margin-bottom: 30px; /* Espaço maior para empurrar os botões para baixo */
+    line-height: 1.6; /* Espaçamento entre linhas para texto longo */
+}
+
+/* Container dos botões lado a lado */
+.hero-buttons {
+    display: flex;
+   justify-content: center; 
+    gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Estilo Base dos Botões */
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    text-transform: uppercase; /* Opcional: texto em maiúsculas */
+}
+
+/* Botão Vermelho Preenchido ("Fale Conosco") */
+.btn-filled {
+    background-color: #e31d2d; /* Vermelho Shineray */
+    color: white;
+    border: 2px solid #e31d2d;
+}
+
+.btn-filled:hover {
+    background-color: #c01a27; /* Vermelho mais escuro no hover */
+}
+
+/* Botão Outline Vazado ("Ver Modelos") */
+.btn-outline {
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    border: 2px solid white; /* Borda branca */
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: black; /* Inverte as cores no hover */
+}
+
+/* Ajuste do ícone do WhatsApp */
+.btn-filled i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Seção de Modelos (Fundo Escuro como na primeira imagem) */
+.modelos {
+    background-color: #ffffff; /* Cinza quase preto */
+    padding: 60px 0;
+    text-align: center; /* Centraliza tudo dentro da seção */
+}
+
+/* Título Estilo Clássico (Com Serifa) */
+.titulo-destaque {
+    color: black; /* Texto preto */
+    font-family: 'Arial', sans-serif; /* Fonte com serifa igual à imagem */
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Subtítulo centralizado e discreto */
+.subtitulo-modelos {
+    color: black; /* Texto preto */
+    font-family: Arial, sans-serif; /* Fonte sem serifa para o texto menor */
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto 40px auto; /* Centraliza o bloco e dá margem para os cards */
+    line-height: 1.4;
+}
+
+/* 1. Grid e Espaçamento da Seção */
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Margem inferior para afastar da seção de baixo */
+    margin-bottom: 80px; 
+}
+
+/* 2. Card Quadrado */
+.card-quadrado {
+    background: #0b1f3a; 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Ajustei para 1/1.2 para dar mais espaço ao texto centralizado */
+    aspect-ratio: 1 / 1.2; 
+    transition: transform 0.3s ease;
+}
+
+.card-quadrado:hover {
+    transform: translateY(-10px);
+}
+
+/* 3. Imagem no topo */
+.card-topo {
+    width: 100%;
+    height: 50%;
+}
+
+.card-topo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 4. Corpo do card (CENTRALIZADO) */
+.card-corpo {
+    padding: 20px;
+    color: white;
+    /* Mudança principal: centralizando tudo */
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Centraliza o botão e elementos flex */
+    gap: 5px;
+    justify-content: flex-start; /* Centraliza verticalmente o conteúdo */
+    flex-grow: 1;
+}
+
+.card-corpo h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.card-corpo p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.4;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 60%; /* Aumentamos de 50% para 60% para ocupar mais o card */
+}
+
+/* 5. Botão Centralizado */
+.btn-container {
+    width: 100%;
+    margin-top: 0; /* Empurra o botão para o final do card */
+}
+
+.btn-whatsapp-center {
+    display: inline-block;
+    background-color: #e31d2d;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    width: auto; 
+    transition: 0.3s;
+}
+
+.btn-whatsapp-center:hover {
+    background-color: #b01521;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+}
+
+.card h3{
+margin:15px 0;
+}
+
+.empresa{
+padding:80px 0;
+background:#0b1f3a;
+}
+
+.titulo-secao{
+text-align:center;
+color: white;
+font-size:32px;
+margin-bottom:50px;
+}
+
+.empresa-conteudo{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.empresa-texto{
+flex:1;
+color:white;
+font-size:18px;
+line-height:1.6;
+}
+
+.empresa-imagem{
+flex:1;
+}
+
+.empresa-imagem img{
+width:100%;
+border-radius:8px;
+}
+
+.aviso{
+font-size:14px;
+color:white;
+margin-top:15px;
+}
+
+/* Container para alinhar os cards lado a lado */
+.container-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: #0a0f1a; /* Cor de fundo escura do seu site */
+    padding: 40px;
+}
+
+/* Estilo base do Card */
+.card {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    
+    /* Borda inicial (invisível ou da cor do fundo) */
+    border: 2px solid transparent; 
+    
+    /* Transição suave para a borda não "piscar" */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    border-color: #e31d2d; /* O vermelho da Shineray */
+    transform: translateY(-5px); /* Opcional: faz o card subir um pouco */
+}
+
+/* Estilização dos textos dentro do card */
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contato{
+background:white;
+padding:80px 0;
+}
+
+.titulo-contato{
+text-align:center;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.subtitulo-contato{
+text-align:center;
+color:#666;
+margin-bottom:50px;
+}
+
+.contato-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.box-contato{
+display:flex;
+align-items:center;
+gap:15px;
+background:#0b1f3a;
+color:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.box-contato i{
+font-size:22px;
+color:#ff2d2d;
+}
+
+.mapa-box iframe{
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.btn-avaliacoes{
+display:block;
+text-align:center;
+background:#e60023;
+color:white;
+padding:12px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+form{
+display:flex;
+flex-direction:column;
+}
+
+input, textarea{
+margin-bottom:10px;
+padding:10px;
+border:1px solid #ccc;
+}
+
+button{
+background:#e60023;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+color:white;
+padding:25px 0;
+margin-top:40px;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+footer a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+}
+
+.btn-whatsapp{
+display:inline-block;
+margin-top:15px;
+background:#e60023;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+background:#1ebe5d;
+}
