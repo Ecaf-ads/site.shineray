@@ -208,38 +208,43 @@ font-weight:bold;
     white-space: nowrap; /* Impede que o texto quebre em duas linhas */
 }
 
-/* Botão Vermelho Preenchido ("Fale Conosco") */
-.btn-filled {
-    background-color: #e31d2d !important; /* Força o vermelho Shineray */
-    color: white !important;           /* Força o texto branco */
-    border: 2px solid #e31d2d;
+/* Estilo para o Botão Vermelho (Normal e Visitado) */
+.btn-filled, 
+.btn-filled:visited {
+    background-color: #e31d2d !important;
+    color: #ffffff !important;
+    border: 2px solid #e31d2d !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
+/* Quando passa o mouse */
 .btn-filled:hover {
     background-color: #b01521 !important;
-    border-color: #b01521;
+    border-color: #b01521 !important;
+    color: #ffffff !important;
 }
 
-/* Botão Outline Vazado ("Ver Modelos") */
-.btn-outline {
-    background-color: transparent;
-    color: white !important;
-    border: 2px solid #ffffff;
-}
-
-.btn-outline:hover {
-    background-color: white;
-    color: black !important;
-}
-
-/* Ajuste do ícone do WhatsApp */
+/* Ajuste do ícone para garantir que ele fique branco */
 .btn-filled i {
+    color: #ffffff !important;
     margin-right: 10px;
     font-size: 1.2rem;
 }
 
-.btn:visited {
-    color: white !important;
+/* Botão de Contorno (Ver Modelos) */
+.btn-outline, 
+.btn-outline:visited {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    text-decoration: none !important;
 }
 
 @media (max-width: 480px) {
