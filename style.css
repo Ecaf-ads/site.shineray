@@ -144,7 +144,7 @@ font-weight:bold;
 /* Configuração Geral do Hero (Fundo e Altura) */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
-                url("shineray_disa_motos_geral.jpeg");
+                url("Shineray_geral.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
