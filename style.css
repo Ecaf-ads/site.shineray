@@ -600,37 +600,61 @@ cursor:pointer;
 
 /* Configurações Gerais do Rodapé */
 /* Container Principal do Rodapé */
+/* Container Principal do Rodapé */
 .footer-site {
-    background-color: #0b1f3a; /* Fundo bem escuro */
+    background-color: #0b1f3a; 
     color: #ffffff;
-    padding: 60px 0 20px 0;
+    padding: 70px 0 30px 0; /* Aumentado padding superior */
     width: 100%;
+    font-family: sans-serif;
 }
 
-/* O "Pai" que coloca as colunas lado a lado */
 .footer-container {
-    display: flex; /* ATIVA O ALINHAMENTO LADO A LADO */
-    justify-content: space-around; /* Espalha as colunas */
+    display: flex; 
+    justify-content: space-between; 
     align-items: flex-start;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza o rodapé na tela */
+    margin: 0 auto; 
     padding: 0 20px;
 }
 
-/* Estilo das colunas individuais */
 .footer-col {
-    flex: 1; /* Faz as colunas terem tamanhos iguais */
+    flex: 1; 
     padding: 0 15px;
 }
 
-/* Ajuste das listas (Links Rápidos) */
+/* --- Ajuste da Logo --- */
+.footer-logo {
+    width: 100%;
+    max-width: 220px; /* Logo aumentada como solicitado */
+    height: auto;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.footer-desc {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Títulos das Colunas --- */
+.footer-col h3.footer-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 30px; /* Aumentado espaço entre título e subtítulo/links */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- Links e Listas --- */
 .footer-col ul {
-    list-style: none; /* Remove as bolinhas da lista */
+    list-style: none;
     padding: 0;
 }
 
 .footer-col ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Espaçamento entre links */
 }
 
 .footer-col a {
@@ -640,50 +664,80 @@ cursor:pointer;
 }
 
 .footer-col a:hover {
-    color: #e31d2d;
+    color: #e31d2d; /* Vermelho no hover */
 }
 
-/* Ícones de Contato e Redes Sociais */
-.contact-info p, .social-icons {
-    margin-bottom: 15px;
+/* --- Informações de Contato --- */
+.contact-info p {
+    margin-bottom: 18px; /* Espaçamento entre os itens de contato */
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
+    color: #b3b3b3;
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: #e31d2d; /* Ícones em vermelho para combinar com a marca */
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+/* --- Redes Sociais --- */
+.social-icons {
+    display: flex;
+    gap: 15px;
 }
 
 .social-icons a {
     background: #1a1a1a;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: white;
+    transition: 0.3s;
 }
 
-/* Linha de Copyright lá embaixo */
+.social-icons a:hover {
+    background: #e31d2d;
+    transform: translateY(-3px);
+}
+
+/* --- Rodapé Inferior --- */
 .footer-bottom {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #222;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
     width: 100%;
 }
 
-.footer-logo {
-    max-width: 220px; /* Aumente o limite de largura no rodapé */
-    height: auto;
-    margin-bottom: 20px;
+.footer-bottom p {
+    color: #777;
+    font-size: 0.85rem;
 }
 
-/* Ajuste Responsivo */
+/* --- Responsividade --- */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
-    .contact-info p, .social-icons {
+    
+    .footer-col {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+
+    .social-icons {
         justify-content: center;
     }
 }
