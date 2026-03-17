@@ -489,6 +489,7 @@ body {
     .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 40px; }
     .footer-col { width: 100%; padding: 0; }
     .social-icons, .contact-info p { justify-content: center; }
+   .footer-logo {margin: 0 auto 25px auto !important; /}
 }
 
 /* ============================================================
