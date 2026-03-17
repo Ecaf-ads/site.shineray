@@ -651,7 +651,44 @@ margin:15px 0;
 
 }
 
+@media (max-width: 768px) {
+    /* 1. Faz a grid virar uma coluna única */
+    .grid-modelos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 
+    /* 2. Ajusta a largura do card para ocupar quase toda a tela */
+    .card-quadrado {
+        width: 90% !important; /* Igual à segunda imagem */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* 3. CORREÇÃO DA IMAGEM: Evita que ela fique esticada */
+    .card-topo img {
+        width: 100%;
+        height: 200px !important; /* Altura fixa para ficar retangular no celular */
+        object-fit: cover; /* Corta a imagem sem distorcer */
+    }
+
+    /* 4. Ajustes de texto no card para mobile */
+    .card-corpo {
+        padding: 20px;
+    }
+
+    .card-corpo h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .card-corpo p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+}
 
 .empresa{
 
@@ -731,23 +768,41 @@ margin-top:15px;
 
 }
 
-/* Ajuste para a seção Sobre no Celular */
 @media (max-width: 768px) {
-    .sobre-empresa-container { /* Verifique se este é o nome da sua div pai no Sobre */
-        flex-direction: column;
-        padding: 20px;
+    /* 1. Faz o conteúdo empilhar: Texto em cima, Imagem embaixo */
+    .empresa-conteudo {
+        flex-direction: column !important; 
+        text-align: left; /* Ou center, se preferir como na imagem do Betão */
+        gap: 30px;
+        padding: 0 10px;
     }
 
-    .sobre-texto {
+    /* 2. Força o texto a ocupar a largura total da tela */
+    .empresa-texto {
         width: 100% !important;
-        text-align: center;
-        padding: 0;
+        flex: none !important; /* Remove o comportamento de "dividir" a linha */
     }
 
-    .sobre-texto p {
+    /* 3. Ajusta o parágrafo para não ficar espremido */
+    .empresa-texto p {
         font-size: 16px;
         line-height: 1.6;
-        text-align: center; /* Centraliza o texto para ficar melhor no celular */
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    /* 4. Ajusta a imagem para vir logo abaixo do texto */
+    .empresa-imagem {
+        width: 100% !important;
+        order: 2; /* Garante que a imagem fique embaixo */
+    }
+
+    .empresa-imagem img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 }
 
@@ -873,18 +928,35 @@ margin-top:15px;
 
 
 
-/* Ajuste para Celular */
-
 @media (max-width: 768px) {
-
-    .contato-grid {
-
-        grid-template-columns: 1fr;
-
+    /* 1. Faz o container dos cards virar uma coluna */
+    .container-cards {
+        display: flex;
+        flex-direction: column; /* Empilha os cards */
+        align-items: center;    /* Centraliza na tela */
+        gap: 20px;             /* Espaço entre um card e outro */
+        padding: 0 20px;       /* Margens nas laterais para não encostar na tela */
     }
 
-}
+    /* 2. Ajusta a largura de cada card individual */
+    .card-vantagem {
+        width: 100% !important; /* Faz o card ocupar a largura total disponível */
+        max-width: 400px;       /* Impede que o card fique largo demais em tablets */
+        margin: 0 auto;         /* Garante a centralização */
+        padding: 25px;          /* Espaço interno para o texto não encostar na borda do card */
+    }
 
+    /* 3. Ajuste sutil no texto para mobile */
+    .card-vantagem h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .card-vantagem p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
 
 
 link-tel {
