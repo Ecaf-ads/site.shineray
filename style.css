@@ -511,9 +511,9 @@ margin-bottom:50px;
 
 .contato-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
-    gap: 30px; /* Espaço entre os blocos e o mapa */
-    align-items: stretch; /* Faz o mapa ter a mesma altura dos blocos */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 30px;
+    align-items: start; /* Alinha o topo das duas colunas */
 }
 
 .box-contato {
@@ -547,31 +547,41 @@ margin-bottom:50px;
     text-decoration: none;
 }
 
-.mapa-box {
-    width: 100%;
-    height: 100%;
-    min-height: 400px; /* Altura mínima para o mapa não ficar pequeno */
+.mapa-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre o mapa e o botão */
 }
 
 .mapa-box iframe {
     width: 100%;
-    height: 100%;
     border-radius: 10px;
+    display: block; /* Remove espaços vazios embaixo do iframe */
 }
 
-.btn-avaliacoes{
-display:block;
-text-align:center;
-background:#e60023;
-color:white;
-padding:12px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
+.btn-avaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #e60023; /* Vermelho */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
 }
-form{
-display:flex;
-flex-direction:column;
+
+.btn-avaliacoes:hover {
+    background-color: #b0001a;
+}
+
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr; /* Uma coluna só no celular */
+    }
 }
 
 input, textarea{
