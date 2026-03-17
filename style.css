@@ -245,115 +245,85 @@ font-weight:bold;
 }
 
 /* Seção de Modelos (Fundo Escuro como na primeira imagem) */
+/* Seção Geral */
 .modelos {
-    background-color: #ffffff; /* Cinza quase preto */
-    padding: 60px 0;
-    text-align: center; /* Centraliza tudo dentro da seção */
-}
-
-/* Título Estilo Clássico (Com Serifa) */
-.titulo-destaque {
-    color: black; /* Texto preto */
-    font-family: 'Arial', sans-serif; /* Fonte com serifa igual à imagem */
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 10px;
+    background-color: #ffffff; /* FUNDO BRANCO */
+    padding: 80px 0;
     text-align: center;
 }
 
-/* Subtítulo centralizado e discreto */
+/* Títulos e Subtítulos (Agora Escuros) */
+.titulo-destaque {
+    color: #1a1a1a; /* Preto suave */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 .subtitulo-modelos {
-    color: black; /* Texto preto */
-    font-family: Arial, sans-serif; /* Fonte sem serifa para o texto menor */
-    font-size: 1rem;
-    max-width: 500px;
-    margin: 0 auto 40px auto; /* Centraliza o bloco e dá margem para os cards */
-    line-height: 1.4;
+    color: #666; /* Cinza escuro */
+    font-size: 1.1rem;
+    margin-bottom: 50px;
 }
 
-/* 1. Grid e Espaçamento da Seção */
+/* Grid de Modelos */
 .grid-modelos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 30px;
-    /* Margem inferior para afastar da seção de baixo */
-    margin-bottom: 80px; 
+    flex-wrap: wrap;
 }
 
-/* 2. Card Quadrado */
+/* Estilo do Card Quadrado */
 .card-quadrado {
-    background: #0b1f3a; 
+    background-color: #f9f9f9; /* Cinza bem clarinho para o card */
     border-radius: 12px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    /* Ajustei para 1/1.2 para dar mais espaço ao texto centralizado */
-    aspect-ratio: 1 / 1.2; 
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar no fundo branco */
     transition: transform 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .card-quadrado:hover {
     transform: translateY(-10px);
 }
 
-/* 3. Imagem no topo */
-.card-topo {
-    width: 100%;
-    height: 50%;
-}
-
+/* Imagem do Card */
 .card-topo img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
-/* 4. Corpo do card (CENTRALIZADO) */
+/* Corpo do Card (Textos Escuros) */
 .card-corpo {
-    padding: 20px;
-    color: white;
-    /* Mudança principal: centralizando tudo */
-    text-align: center; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Centraliza o botão e elementos flex */
-    gap: 5px;
-    justify-content: flex-start; /* Centraliza verticalmente o conteúdo */
-    flex-grow: 1;
+    padding: 25px;
 }
 
 .card-corpo h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    width: 100%;
+    color: #111;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .card-corpo p {
-    font-size: 0.95rem;
-    color: #ccc;
-    line-height: 1.4;
-    margin-bottom: 2px;
-    width: 100%;
-    height: 60%; /* Aumentamos de 50% para 60% para ocupar mais o card */
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* 5. Botão Centralizado */
-.btn-container {
-    width: 100%;
-    margin-top: 0; /* Empurra o botão para o final do card */
-}
-
+/* Botão WhatsApp */
 .btn-whatsapp-center {
     display: inline-block;
-    background-color: #e31d2d;
-    color: white;
+    background-color: #e31d2d; /* Vermelho Shineray */
+    color: #fff;
     padding: 12px 20px;
-    text-decoration: none;
     border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
-    width: auto; 
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .btn-whatsapp-center:hover {
