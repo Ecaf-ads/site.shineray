@@ -512,3 +512,50 @@ body {
 
 input, textarea { margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; }
 button { background: #e60023; color: white; border: none; padding: 12px; cursor: pointer; }
+
+/* ============================================================
+   BOTÃO FLUTUANTE WHATSAPP (FIXO)
+   ============================================================ */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF !important;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 10000; /* Número alto para ficar na frente de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite; /* Faz o botão pulsar */
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+/* Animação de Pulso */
+@keyframes pulse-whatsapp {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 30px;
+    }
+}
