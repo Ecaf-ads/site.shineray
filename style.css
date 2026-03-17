@@ -532,14 +532,14 @@ font-weight:bold;
 
 /* Títulos e Subtítulos (Claros novamente) */
 .titulo-destaque {
-    color: #ffffff; 
+    color: #000000; 
     font-size: 2.5rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
 .subtitulo-modelos {
-    color: #b3b3b3; /* Cinza claro para leitura */
+    color: #000000; /* Cinza claro para leitura */
     font-size: 1.1rem;
     margin-bottom: 50px;
 }
@@ -725,40 +725,55 @@ margin:15px 0;
     color: #cccccc;
 }
 
-/* Seção Sobre a Empresa - Fundo Escuro Original */
+/* --- SEÇÃO EMPRESA (DESKTOP) --- */
 .empresa {
     padding: 80px 0;
-    background: #0a0f1a; /* Azul-marinho escuro original */
+    background-color: #0a0f1a; /* Azul Marinho Padrão */
 }
 
 .titulo-secao {
     text-align: center;
-    color: white; /* Título Branco */
+    color: #ffffff;
     font-size: 32px;
     margin-bottom: 50px;
 }
 
 .empresa-conteudo {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    gap: 40px;
+    align-items: center; /* Alinha verticalmente o texto com o centro da imagem */
+    justify-content: space-between;
+    gap: 50px; /* Espaço entre texto e imagem */
 }
 
 .empresa-texto {
-    flex: 1; /* Ocupa 50% da largura */
-    color: white; /* Texto Branco */
+    flex: 1; /* Ocupa metade do espaço */
+    color: #ffffff; /* Texto Branco */
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.8;
+}
+
+.empresa-texto p {
+    margin-bottom: 20px;
+}
+
+.empresa-texto strong {
+    color: #e31d2d; /* Destaque em vermelho no texto */
+}
+
+.aviso {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-top: 15px;
 }
 
 .empresa-imagem {
-    flex: 1; /* Ocupa 50% da largura */
+    flex: 1; /* Ocupa a outra metade */
 }
 
 .empresa-imagem img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para destaque */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
