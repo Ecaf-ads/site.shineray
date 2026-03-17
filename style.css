@@ -271,7 +271,7 @@ margin:15px 0;
 
 .empresa{
 padding:80px 0;
-background:#0b1f3a;
+background:#0a0f1a;
 }
 
 .titulo-secao{
@@ -309,48 +309,70 @@ color:white;
 margin-top:15px;
 }
 
-/* Container para alinhar os cards lado a lado */
-.container-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    background-color: #0a0f1a; /* Cor de fundo escura do seu site */
-    padding: 40px;
+/* Container Principal */
+.secao-vantagens {
+    background-color: #0a0f1a; /* Fundo azul marinho bem escuro */
+    padding: 60px 0;
+    width: 100%;
 }
 
-/* Estilo base do Card */
-.card {
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo Individual dos Cards */
+.card-vantagem {
     background-color: #1a1a1a;
-    color: white;
-    padding: 30px;
-    border-radius: 8px;
-    width: 300px;
+    flex: 1;
+    padding: 35px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-    
-    /* Borda inicial (invisível ou da cor do fundo) */
-    border: 2px solid transparent; 
-    
-    /* Transição suave para a borda não "piscar" */
+    border: 2px solid transparent;
     transition: border-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
-/* Efeito ao passar o mouse */
-.card:hover {
+.card-vantagem:hover {
     border-color: #e31d2d; /* O vermelho da Shineray */
-    transform: translateY(-5px); /* Opcional: faz o card subir um pouco */
+    transform: translateY(-5px); /* Opcional: faz o card subir levemente */
+    box-shadow: 0 5px 15px rgba(227, 29, 45, 0.2); /* Opcional: brilho sutil vermelho */
 }
 
-/* Estilização dos textos dentro do card */
-.card h3 {
-    margin: 15px 0;
-    font-size: 1.2rem;
+/* Ícones Vermelhos */
+.card-vantagem i {
+    color: #e31d2d; /* Vermelho Shineray */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
-.card p {
+/* Títulos */
+.card-vantagem h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Subtítulos */
+.card-vantagem p {
     color: #b3b3b3;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.5;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .container-cards {
+        flex-direction: column;
+    }
 }
 
 .contato{
@@ -457,6 +479,9 @@ font-weight:bold;
 transition:0.3s;
 }
 
+.btn-whatsapp:hover{
+background:#1ebe5d;
+}
 .btn-whatsapp:hover{
 background:#1ebe5d;
 }
