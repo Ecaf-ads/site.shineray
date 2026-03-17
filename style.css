@@ -589,6 +589,12 @@ cursor:pointer;
     width: 100%;
 }
 
+.footer-logo {
+    max-width: 220px; /* Aumente o limite de largura no rodapé */
+    height: auto;
+    margin-bottom: 20px;
+}
+
 /* Ajuste Responsivo */
 @media (max-width: 768px) {
     .footer-container {
