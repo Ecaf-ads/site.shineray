@@ -1,278 +1,1503 @@
-/* ============================================================
-   ESTILOS GERAIS (RESET E ESTRUTURA)
-   ============================================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial, Helvetica, sans-serif;
+
 }
+
+
+
+body{
+
+background:#f5f5f5;
+
+color:#333;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+/* RESET GERAL: Remove espaços padrão do navegador */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
 
 body {
+
+    /* Ajuste este valor para a altura exata do seu menu para não cobrir o topo do site */
+
     padding-top: 90px; 
-    background-color: #000;
-    color: #333;
+
+    background-color: #000; /* Evita flashes brancos durante o carregamento */
+
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Dá um respiro lateral */
+        margin: 0 auto;
+    }
+    
+    h2, h1 {
+        font-size: 28px !important; /* Diminui um pouco os títulos no celular */
+    }
 }
 
-/* ============================================================
-   HEADER / CABEÇALHO
-   ============================================================ */
+/* Configuração do Cabeçalho Fixo */
+
 .header-fixo {
+
     background-color: #000000;
+
     width: 100%;
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     z-index: 1000;
+
     padding: 10px 0;
+
     border-bottom: 1px solid #333;
+
 }
+
+
+
+/* Container Principal */
 
 .header-container {
+
     max-width: 1300px;
+
     margin: 0 auto;
+
     display: flex;
+
     align-items: center;
+
+    /* justify-content aqui não afetará os pesos flex, mas mantemos por segurança */
+
     justify-content: space-between; 
+
     padding: 0 30px;
-    position: relative;
+
+    position: relative; /* Adicionado para controle absoluto se necessário */
+
 }
 
-.header-logo { flex: 1; display: flex; justify-content: flex-start; }
-.header-botao { flex: 1; display: flex; justify-content: flex-end; }
-.header-nav { flex: 2; display: flex; justify-content: center; }
+
+
+/* Esquerda: Logo */
+
+.header-logo {
+
+    flex: 1; 
+
+    display: flex;
+
+    justify-content: flex-start;
+
+}
+
+
+
+/* DIREITA: Botão */
+
+.header-botao {
+
+    flex: 1; 
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+
+/* CENTRO: Onde o ajuste acontece */
+
+.header-nav {
+
+    flex: 2; /* Ocupa o dobro de espaço das pontas para garantir o centro */
+
+    display: flex;
+
+    justify-content: center; /* Centraliza os links dentro desse espaço */
+
+}
+
+
 
 .header-nav ul {
+
     list-style: none;
+
     display: flex;
+
     gap: 30px;
+
+    margin: 0;
+
+    padding: 0;
+
+    /* Remova qualquer margin-right ou padding-right que tenhamos colocado antes */
+
+    margin-right: 0; 
+
 }
 
 .header-nav ul li a {
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     font-size: 16px;
+
     transition: color 0.3s ease;
+
 }
 
-.header-nav ul li a:hover { color: #e31d2d; }
+
+
+.header-nav ul li a:hover {
+
+    color: #e31d2d;
+
+}
+
+
+
+/* Botão de Localização */
 
 .btn-loc {
+
     background-color: #e31d2d;
+
     color: white !important;
+
     padding: 12px 24px;
+
     border-radius: 5px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
+    transition: background 0.3s;
+
     font-size: 14px;
+
 }
 
-/* ============================================================
-   HERO / BANNER PRINCIPAL
-   ============================================================ */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url("Shineray_geral.jpeg");
-    background-size: cover;
-    background-position: center;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
+
+
+.btn-loc:hover {
+
+    background-color: #b01521;
+
 }
+
+
+
+.btn-loc i {
+
+    color: white;
+
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 992px) {
+
+    .header-nav {
+
+        display: none; /* Esconde links em tablets/celulares para não quebrar */
+
+    }
+
+    
+
+    .header-logo img {
+
+        height: 45px;
+
+    }
+
+    
+
+    body {
+
+        padding-top: 70px;
+
+    }
+
+}
+
+}
+
+
+
+.menu a{
+
+color:white;
+
+margin-left:20px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+/* Configuração Geral do Hero (Fundo e Altura) */
+
+.hero {
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+
+                url("Shineray_geral.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    color: white;
+
+    padding: 100px 0; /* Aumenta o padding para dar mais espaço */
+
+    min-height: 80vh; /* Banner ocupa boa parte da altura da tela */
+
+    display: flex;
+
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+
+    text-align: center; /* Alinhamento à esquerda */
+
+}
+
+
+
+/* Container do conteúdo dentro do Hero */
+
+.hero-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center; /* Alinha os itens à esquerda */
+
+    width: 100%; /* Ocupa apenas uma parte da largura para não quebrar muito o texto */
+
+    max-width: 1000px;
+
+}
+
+
+
+/* Título Grande e em Evidência */
 
 .hero h1 {
-    font-size: 4rem;
+
+    font-size: 4rem; /* Tamanho grande */
+
+    font-family: 'Arial', sans-serif; /* Fonte com serifa para o estilo elegante */
+
     font-weight: bold;
-    line-height: 1.1;
+
+    color: white;
+
     margin-bottom: 20px;
+
+    letter-spacing: -1px; /* Letras mais próximas para um visual moderno */
+
+    line-height: 1.1;
+
 }
+
+
+
+/* Subtítulo (Texto longo da Imagem 1) */
 
 .hero p {
+
     font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente para leitura */
+
+    align-items: center;
+
+    margin-bottom: 30px; /* Espaço maior para empurrar os botões para baixo */
+
+    line-height: 1.6; /* Espaçamento entre linhas para texto longo */
+
 }
+
+
+
+/* Container dos botões lado a lado */
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+    display: flex;         /* Coloca os itens lado a lado */
+
+    justify-content: center; /* Centraliza os botões no meio da tela */
+
+    align-items: center;
+
+    gap: 20px;             /* Espaço entre um botão e outro */
+
+    margin-top: 30px;
+
+    width: 100%;
+
 }
 
-/* BOTÕES GLOBAIS */
-.btn-filled, .btn-filled:visited {
+
+
+/* Estilo Base dos Botões */
+
+.btn {
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.3s;
+
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+
+}
+
+
+
+/* Estilo para o Botão Vermelho (Normal e Visitado) */
+
+.btn-filled, 
+
+.btn-filled:visited {
+
     background-color: #e31d2d !important;
+
     color: #ffffff !important;
+
     border: 2px solid #e31d2d !important;
-    padding: 12px 28px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none !important;
+
     display: inline-flex;
+
     align-items: center;
-    transition: 0.3s;
+
+    justify-content: center;
+
+    text-decoration: none !important;
+
+    padding: 12px 28px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
 }
 
-.btn-outline, .btn-outline:visited {
-    background-color: transparent !important;
+
+
+/* Quando passa o mouse */
+
+.btn-filled:hover {
+
+    background-color: #b01521 !important;
+
+    border-color: #b01521 !important;
+
     color: #ffffff !important;
+
+}
+
+
+
+/* Ajuste do ícone para garantir que ele fique branco */
+
+.btn-filled i {
+
+    color: #ffffff !important;
+
+    margin-right: 10px;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+/* Botão de Contorno (Ver Modelos) */
+
+.btn-outline, 
+
+.btn-outline:visited {
+
+    background-color: transparent !important;
+
+    color: #ffffff !important;
+
     border: 2px solid #ffffff !important;
-    padding: 12px 28px;
-    border-radius: 5px;
-    font-weight: bold;
+
     text-decoration: none !important;
-    display: inline-flex;
-    align-items: center;
+
 }
 
-/* ============================================================
-   SEÇÃO SOBRE A EMPRESA
-   ============================================================ */
-.empresa {
-    padding: 80px 0;
-    background: #0a0f1a;
-}
 
-.empresa-conteudo {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.empresa-texto {
-    flex: 1;
-    color: white;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.empresa-imagem { flex: 1; }
-.empresa-imagem img { width: 100%; border-radius: 8px; }
-
-/* ============================================================
-   SEÇÃO VANTAGENS
-   ============================================================ */
-.secao-vantagens { background-color: #0a0f1a; padding: 60px 0; }
-.container-cards { display: flex; justify-content: center; gap: 20px; }
-
-.card-vantagem {
-    background-color: #1a1a1a;
-    flex: 1;
-    padding: 30px;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    transition: 0.3s;
-    text-align: left;
-}
-
-.card-vantagem:hover { border-color: #e31d2d; transform: translateY(-5px); }
-.card-vantagem i { color: #e31d2d; font-size: 2rem; margin-bottom: 20px; }
-.card-vantagem h3 { color: white; margin-bottom: 12px; }
-.card-vantagem p { color: #b3b3b3; font-size: 0.95rem; }
-
-/* ============================================================
-   CONTATO E MAPA
-   ============================================================ */
-.contato { background: white; padding: 80px 0; }
-.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-
-.box-contato {
-    display: flex;
-    gap: 20px;
-    background: #0b1f3a;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.mapa-coluna { display: flex; flex-direction: column; gap: 15px; }
-.mapa-box iframe { width: 100%; border-radius: 10px; }
-
-/* ============================================================
-   RODAPÉ (FOOTER)
-   ============================================================ */
-.footer-site {
-    background-color: #0b1f3a;
-    color: #ffffff;
-    padding: 70px 0 30px 0;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-col { flex: 1; padding: 0 15px; }
-.footer-logo { max-width: 220px; margin-bottom: 25px; }
-.footer-titulo { font-size: 1.2rem; margin-bottom: 30px; text-transform: uppercase; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 15px; }
-.footer-col a { color: #b3b3b3; text-decoration: none; }
-
-.contact-info p { display: flex; gap: 12px; margin-bottom: 18px; color: #b3b3b3; }
-.contact-info i { color: #e31d2d; }
-
-.social-icons { display: flex; gap: 15px; }
-.social-icons a {
-    background: #1a1a1a; width: 40px; height: 40px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%; color: white; transition: 0.3s;
-}
-.social-icons a:hover { background: #e31d2d; transform: translateY(-3px); }
-
-/* ============================================================
-   RESPONSIVIDADE (MOBILE / CELULAR)
-   ============================================================ */
-@media (max-width: 768px) {
-    /* Ajuste Geral */
-    body { padding-top: 70px; }
-    h1 { font-size: 2.5rem !important; }
-    h2 { font-size: 1.8rem !important; }
-
-    /* Esconder Nav do Topo */
-    .header-nav { display: none; }
-    .header-container { padding: 0 15px; }
-
-    /* Hero */
-    .hero { min-height: 60vh; padding: 60px 0; }
-    .hero-buttons { flex-direction: column; width: 100%; align-items: center; }
-    .btn { width: 90%; justify-content: center; }
-
-    /* Seção Sobre / Empresa (Ajuste das fotos enviadas) */
-    .empresa-conteudo { flex-direction: column; text-align: center; gap: 20px; }
-    .empresa-texto { width: 100% !important; padding: 0 10px; font-size: 16px; }
-    .empresa-imagem { width: 100%; order: 2; }
-
-    /* Vantagens */
-    .container-cards { flex-direction: column; align-items: center; }
-    .card-vantagem { width: 100%; }
-
-    /* Contato e Mapa */
-    .contato-grid { grid-template-columns: 1fr; }
-    .box-contato { flex-direction: column; align-items: center; text-align: center; }
-
-    /* Footer / Rodapé (Ajuste das fotos enviadas) */
-    .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 40px; }
-    .footer-col { width: 100%; padding: 0; }
-    .contact-info p, .social-icons { justify-content: center; }
-    .footer-logo { margin: 0 auto 25px auto; }
-}
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 2.2rem !important; }
+
+    .hero-buttons {
+
+        flex-direction: column; /* No celular bem pequeno, um embaixo do outro é melhor */
+
+        gap: 15px;
+
+    }
+
+}
+
+
+
+/* Seção de Modelos (Fundo Escuro como na primeira imagem) */
+
+/* Seção Geral */
+
+.modelos {
+
+    background-color: #ffffff; /* FUNDO BRANCO */
+
+    padding: 80px 0;
+
+    text-align: center;
+
+}
+
+
+
+/* Títulos e Subtítulos (Agora Escuros) */
+
+.titulo-destaque {
+
+    color: #1a1a1a; /* Preto suave */
+
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+}
+
+
+
+.subtitulo-modelos {
+
+    color: #666; /* Cinza escuro */
+
+    font-size: 1.1rem;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+/* Grid de Modelos */
+
+.grid-modelos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Estilo do Card Quadrado */
+
+.card-quadrado {
+
+    background-color: #f9f9f9; /* Cinza bem clarinho para o card */
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    width: 350px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar no fundo branco */
+
+    transition: transform 0.3s ease;
+
+    border: 1px solid #eee;
+
+}
+
+
+
+.card-quadrado:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+/* Imagem do Card */
+
+.card-topo img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+}
+
+
+
+/* Corpo do Card (Textos Escuros) */
+
+.card-corpo {
+
+    padding: 25px;
+
+}
+
+
+
+.card-corpo h3 {
+
+    color: #111;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.card-corpo p {
+
+    color: #444;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* Botão WhatsApp */
+
+.btn-whatsapp-center {
+
+    display: inline-block;
+
+    background-color: #e31d2d; /* Vermelho Shineray */
+
+    color: #fff;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background 0.3s;
+
+}
+
+
+
+.btn-whatsapp-center:hover {
+
+    background-color: #b01521;
+
+}
+
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+border-radius:8px;
+
+overflow:hidden;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+text-align:center;
+
+}
+
+
+
+.card img{
+
+width:100%;
+
+}
+
+
+
+.card h3{
+
+margin:15px 0;
+
+}
+
+
+
+.empresa{
+
+padding:80px 0;
+
+background:#0a0f1a;
+
+}
+
+
+
+.titulo-secao{
+
+text-align:center;
+
+color: white;
+
+font-size:32px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.empresa-conteudo{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+
+
+.empresa-texto{
+
+flex:1;
+
+color:white;
+
+font-size:18px;
+
+line-height:1.6;
+
+}
+
+
+
+.empresa-imagem{
+
+flex:1;
+
+}
+
+
+
+.empresa-imagem img{
+
+width:100%;
+
+border-radius:8px;
+
+}
+
+
+
+.aviso{
+
+font-size:14px;
+
+color:white;
+
+margin-top:15px;
+
+}
+
+/* Ajuste para a seção Sobre no Celular */
+@media (max-width: 768px) {
+    .sobre-empresa-container { /* Verifique se este é o nome da sua div pai no Sobre */
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sobre-texto {
+        width: 100% !important;
+        text-align: center;
+        padding: 0;
+    }
+
+    .sobre-texto p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center; /* Centraliza o texto para ficar melhor no celular */
+    }
+}
+
+/* Container Principal - Fundo Escuro */
+
+.secao-vantagens {
+
+    background-color: #0a0f1a; 
+
+    padding: 60px 0;
+
+    width: 100%;
+
+}
+
+
+
+.container-cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+/* O Card agora é escuro e alinhado à esquerda */
+
+.card-vantagem {
+
+    background-color: #1a1a1a; /* Cor escura do card */
+
+    flex: 1;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start; /* Alinha tudo à esquerda */
+
+    text-align: left;
+
+    
+
+    /* Borda transparente para o efeito hover */
+
+    border: 2px solid transparent; 
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+}
+
+
+
+/* Efeito da Borda Vermelha ao passar o mouse */
+
+.card-vantagem:hover {
+
+    border-color: #e31d2d;
+
+    transform: translateY(-5px);
+
+}
+
+
+
+/* Ícones Vermelhos (Font Awesome) */
+
+.card-vantagem i {
+
+    color: #e31d2d; 
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* Ajuste das cores dos textos */
+
+.card-vantagem h3 {
+
+    color: #ffffff; /* Título Branco */
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.card-vantagem p {
+
+    color: #b3b3b3; /* Texto Cinza claro */
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+}
+
+
+
+/* Ajuste para Celular */
+
+@media (max-width: 768px) {
+
+    .contato-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+link-tel {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.link-tel:hover {
+
+    text-decoration: underline;
+
+    color: #ff2d2d;
+
+}
+
+
+
+.contato{
+
+background:white;
+
+padding:80px 0;
+
+}
+
+
+
+.titulo-contato{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.subtitulo-contato{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:50px;
+
+}
+
+
+
+.contato-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+
+    gap: 30px;
+
+    align-items: start; /* Alinha o topo das duas colunas */
+
+}
+
+
+
+.box-contato {
+
+    display: flex;
+
+    align-items: flex-start; /* Alinha o ícone no topo do texto */
+
+    gap: 20px;
+
+    background: #0b1f3a;
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    min-height: 100px; /* Garante um tamanho padrão para todas as caixas */
+
+}
+
+
+
+.box-contato div h3 {
+
+    margin: 0 0 5px 0;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+
+.box-contato div p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #ccc;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* Garante que os links dentro das caixas não fiquem azuis/sublinhados */
+
+.box-contato a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+
+.mapa-coluna {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px; /* Espaço entre o mapa e o botão */
+
+}
+
+
+
+.mapa-box iframe {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    display: block; /* Remove espaços vazios embaixo do iframe */
+
+}
+
+
+
+.btn-avaliacoes {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: #e60023; /* Vermelho */
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background 0.3s;
+
+    width: 100%;
+
+}
+
+
+
+.btn-avaliacoes:hover {
+
+    background-color: #b0001a;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .contato-grid {
+
+        grid-template-columns: 1fr; /* Uma coluna só no celular */
+
+    }
+
+}
+
+
+
+input, textarea{
+
+margin-bottom:10px;
+
+padding:10px;
+
+border:1px solid #ccc;
+
+}
+
+
+
+button{
+
+background:#e60023;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+cursor:pointer;
+
+}
+
+
+
+/* Configurações Gerais do Rodapé */
+
+/* Container Principal do Rodapé */
+
+/* Container Principal do Rodapé */
+
+.footer-site {
+
+    background-color: #0b1f3a; 
+
+    color: #ffffff;
+
+    padding: 70px 0 30px 0; /* Aumentado padding superior */
+
+    width: 100%;
+
+    font-family: sans-serif;
+
+}
+
+
+
+.footer-container {
+
+    display: flex; 
+
+    justify-content: space-between; 
+
+    align-items: flex-start;
+
+    max-width: 1200px;
+
+    margin: 0 auto; 
+
+    padding: 0 20px;
+
+}
+
+
+
+.footer-col {
+
+    flex: 1; 
+
+    padding: 0 15px;
+
+}
+
+
+
+/* --- Ajuste da Logo --- */
+
+.footer-logo {
+
+    width: 100%;
+
+    max-width: 220px; /* Logo aumentada como solicitado */
+
+    height: auto;
+
+    margin-bottom: 25px;
+
+    display: block;
+
+}
+
+
+
+.footer-desc {
+
+    color: #b3b3b3;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* --- Títulos das Colunas --- */
+
+.footer-col h3.footer-titulo {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 30px; /* Aumentado espaço entre título e subtítulo/links */
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+}
+
+
+
+/* --- Links e Listas --- */
+
+.footer-col ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+.footer-col ul li {
+
+    margin-bottom: 15px; /* Espaçamento entre links */
+
+}
+
+
+
+.footer-col a {
+
+    color: #b3b3b3;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+
+
+.footer-col a:hover {
+
+    color: #e31d2d; /* Vermelho no hover */
+
+}
+
+
+
+/* --- Informações de Contato --- */
+
+.contact-info p {
+
+    margin-bottom: 18px; /* Espaçamento entre os itens de contato */
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #b3b3b3;
+
+    font-size: 0.95rem;
+
+}
+
+
+
+.contact-info i {
+
+    color: #e31d2d; /* Ícones em vermelho para combinar com a marca */
+
+    font-size: 1.1rem;
+
+    margin-top: 3px;
+
+}
+
+
+
+/* --- Redes Sociais --- */
+
+.social-icons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+
+.social-icons a {
+
+    background: #1a1a1a;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+
+
+.social-icons a:hover {
+
+    background: #e31d2d;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* --- Rodapé Inferior --- */
+
+.footer-bottom {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    width: 100%;
+
+}
+
+
+
+.footer-bottom p {
+
+    color: #777;
+
+    font-size: 0.85rem;
+
+}
+
+
+
+/* --- Responsividade --- */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px; /* Dá espaço entre as colunas do rodapé */
+    }
+
+    .footer-col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .social-icons {
+        justify-content: center; /* Centraliza os ícones do Face e Insta */
+    }
+
+    .contact-info p {
+        justify-content: center; /* Centraliza o endereço e fone */
+    }
+
+.btn-whatsapp{
+
+display:inline-block;
+
+margin-top:15px;
+
+background:#e60023;
+
+color:white;
+
+padding:10px 18px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+
+
+.btn-whatsapp:hover{
+
+background:#1ebe5d;
+
+}
+
+.btn-whatsapp:hover{
+
+background:#1ebe5d;
+
 }
