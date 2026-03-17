@@ -309,9 +309,9 @@ color:white;
 margin-top:15px;
 }
 
-/* Container Principal */
+/* Container Principal - Fundo Escuro */
 .secao-vantagens {
-    background-color: #0a0f1a; /* Fundo azul marinho bem escuro */
+    background-color: #0a0f1a; 
     padding: 60px 0;
     width: 100%;
 }
@@ -325,50 +325,52 @@ margin-top:15px;
     padding: 0 20px;
 }
 
-/* Estilo Individual dos Cards */
+/* O Card agora é escuro e alinhado à esquerda */
 .card-vantagem {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Cor escura do card */
     flex: 1;
-    padding: 35px 25px;
+    padding: 30px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha tudo à esquerda */
     text-align: left;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    
+    /* Borda transparente para o efeito hover */
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
+/* Efeito da Borda Vermelha ao passar o mouse */
 .card-vantagem:hover {
-    border-color: #e31d2d; /* O vermelho da Shineray */
-    transform: translateY(-5px); /* Opcional: faz o card subir levemente */
-    box-shadow: 0 5px 15px rgba(227, 29, 45, 0.2); /* Opcional: brilho sutil vermelho */
+    border-color: #e31d2d;
+    transform: translateY(-5px);
 }
 
-/* Ícones Vermelhos */
+/* Ícones Vermelhos (Font Awesome) */
 .card-vantagem i {
-    color: #e31d2d; /* Vermelho Shineray */
-    font-size: 2.2rem;
+    color: #e31d2d; 
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* Títulos */
+/* Ajuste das cores dos textos */
 .card-vantagem h3 {
-    color: #ffffff;
-    font-size: 1.4rem;
+    color: #ffffff; /* Título Branco */
+    font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* Subtítulos */
 .card-vantagem p {
-    color: #b3b3b3;
+    color: #b3b3b3; /* Texto Cinza claro */
     font-size: 0.95rem;
     line-height: 1.5;
+    margin: 0;
 }
 
-/* Responsividade para Celular */
+/* Ajuste para Celular */
 @media (max-width: 768px) {
     .container-cards {
         flex-direction: column;
