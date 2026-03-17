@@ -210,13 +210,14 @@ font-weight:bold;
 
 /* Botão Vermelho Preenchido ("Fale Conosco") */
 .btn-filled {
-    background-color: #e31d2d;
-    color: white;
+    background-color: #e31d2d !important; /* Força o vermelho Shineray */
+    color: white !important;           /* Força o texto branco */
     border: 2px solid #e31d2d;
 }
 
 .btn-filled:hover {
-    background-color: #c01a27; /* Vermelho mais escuro no hover */
+    background-color: #b01521 !important;
+    border-color: #b01521;
 }
 
 /* Botão Outline Vazado ("Ver Modelos") */
