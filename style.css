@@ -672,33 +672,57 @@ margin:15px 0;
     }
 
     /* 2. Ajusta a largura do card para ocupar quase toda a tela */
-    .card-quadrado {
-        width: 90% !important; /* Igual à segunda imagem */
-        max-width: 400px;
-        margin: 0 auto;
-    }
+   .card-quadrado {
+    background-color: #111d2b;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 350px; /* Largura ideal para desktop */
+    min-height: 500px; /* Altura total do card */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1c2a3a;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
 
     /* 3. CORREÇÃO DA IMAGEM: Evita que ela fique esticada */
+   .card-topo {
+    width: 100%;
+    height: 250px; /* Define uma altura máxima para a foto */
+    background-color: #fff; /* Fundo branco para combinar com o fundo das fotos das motos */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     .card-topo img {
-        width: 100%;
-        height: 200px !important; /* Altura fixa para ficar retangular no celular */
-        object-fit: cover; /* Corta a imagem sem distorcer */
-    }
+    width: 100%;
+    height: 100%;
+    /* 'contain' faz a moto aparecer inteira sem cortes. 
+       'cover' faz preencher tudo (tente os dois e veja qual prefere) */
+    object-fit: cover; 
+    display: block;
+}
 
     /* 4. Ajustes de texto no card para mobile */
     .card-corpo {
-        padding: 20px;
-    }
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Faz o texto ocupar o resto do card */
+    text-align: center;
+}
 
-    .card-corpo h3 {
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-    }
+   .card-corpo h3 {
+    font-size: 1.5rem; /* Maior no PC */
+    margin-bottom: 15px;
+    color: #ffffff;
+}
 
-    .card-corpo p {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-    }
+.card-corpo p {
+    font-size: 1rem; /* Padrão no PC */
+    margin-bottom: 20px;
+    color: #cccccc;
 }
 
 .empresa{
