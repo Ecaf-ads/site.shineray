@@ -16,16 +16,82 @@ max-width:1200px;
 margin:auto;
 }
 
-.header{
-background:#000;
-color:white;
+/* Configuração do Cabeçalho para ficar Fixo */
+.header-fixo {
+    background-color: #000000; /* Fundo preto */
+    width: 100%;
+    position: fixed; /* Faz o menu acompanhar a rolagem */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
 }
 
-.header-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 0;
+/* Container para alinhar os 3 blocos */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Espalha: Logo (esq), Nav (meio), Botão (dir) */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.header-logo img {
+    height: 40px; /* Ajuste conforme o tamanho da sua logo */
+}
+
+/* Menu do Meio */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço entre os links */
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header-nav ul li a:hover {
+    color: #e31d2d; /* Vermelho no hover */
+}
+
+/* Botão da Direita */
+.btn-loc {
+    background-color: #e31d2d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.btn-loc:hover {
+    background-color: #b01521;
+}
+
+/* IMPORTANTE: Como o menu é fixo, adicione um padding no topo do body 
+   para o conteúdo do site não começar "debaixo" do menu */
+body {
+    padding-top: 80px; 
+}
+
+/* Celular: Esconde o menu ou transforma em coluna */
+@media (max-width: 768px) {
+    .header-nav {
+        display: none; /* Em um projeto real, aqui você usaria um menu sanduíche */
+    }
 }
 
 .menu a{
