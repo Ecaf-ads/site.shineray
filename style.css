@@ -63,10 +63,10 @@ margin:auto;
     color: #e31d2d; /* Vermelho no hover */
 }
 
-/* Botão da Direita */
+/* Estilo do Botão de Localização */
 .btn-loc {
-    background-color: #e31d2d;
-    color: white;
+    background-color: #e31d2d; /* Vermelho Shineray */
+    color: white !important; /* Força a cor branca */
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -79,6 +79,11 @@ margin:auto;
 
 .btn-loc:hover {
     background-color: #b01521;
+}
+
+/* Garante que o ícone do GPS fique branco */
+.btn-loc i {
+    color: white;
 }
 
 /* IMPORTANTE: Como o menu é fixo, adicione um padding no topo do body 
