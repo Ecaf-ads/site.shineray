@@ -451,119 +451,76 @@ cursor:pointer;
 }
 
 /* Configurações Gerais do Rodapé */
+/* Container Principal do Rodapé */
 .footer-site {
-    background-color: #111111; /* Fundo quase preto */
+    background-color: #0d0d0d; /* Fundo bem escuro */
     color: #ffffff;
     padding: 60px 0 20px 0;
-    font-family: Arial, sans-serif;
+    width: 100%;
 }
 
+/* O "Pai" que coloca as colunas lado a lado */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap; /* Para quebrar linha no celular */
+    display: flex; /* ATIVA O ALINHAMENTO LADO A LADO */
+    justify-content: space-around; /* Espalha as colunas */
+    align-items: flex-start;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza o rodapé na tela */
     padding: 0 20px;
 }
 
+/* Estilo das colunas individuais */
 .footer-col {
-    flex: 1;
-    min-width: 200px;
+    flex: 1; /* Faz as colunas terem tamanhos iguais */
+    padding: 0 15px;
 }
 
-/* Coluna Sobre / Logo */
-.footer-logo {
-    max-width: 180px;
-    margin-bottom: 20px;
-}
-
-.footer-about p {
-    color: #b3b3b3;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Estilo dos Títulos das Colunas */
-.footer-col h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-/* Estilo dos Links */
+/* Ajuste das listas (Links Rápidos) */
 .footer-col ul {
-    list-style: none;
+    list-style: none; /* Remove as bolinhas da lista */
     padding: 0;
 }
 
 .footer-col ul li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.footer-col ul li a {
+.footer-col a {
     color: #b3b3b3;
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.footer-col ul li a:hover {
+.footer-col a:hover {
     color: #e31d2d;
 }
 
-/* Informações de Contato */
-.contact-info p {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: #b3b3b3;
-    font-size: 0.9rem;
+/* Ícones de Contato e Redes Sociais */
+.contact-info p, .social-icons {
     margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-.contact-info i {
-    color: #e31d2d; /* Ícones vermelhos */
-    margin-top: 3px;
-}
-
-/* Redes Sociais */
-.social-icons {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 .social-icons a {
-    width: 40px;
-    height: 40px;
-    background-color: #222;
-    color: white;
-    display: flex;
+    background: #1a1a1a;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    text-decoration: none;
-    transition: background 0.3s;
+    color: white;
 }
 
-.social-icons a:hover {
-    background-color: #e31d2d;
-}
-
-/* Linha Inferior */
+/* Linha de Copyright lá embaixo */
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid #222;
-    margin-top: 50px;
+    margin-top: 40px;
     padding-top: 20px;
-}
-
-.footer-bottom p {
-    color: #666;
-    font-size: 0.85rem;
+    border-top: 1px solid #222;
+    width: 100%;
 }
 
 /* Ajuste Responsivo */
