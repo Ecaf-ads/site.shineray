@@ -223,19 +223,23 @@ font-weight:bold;
 /* Botão Outline Vazado ("Ver Modelos") */
 .btn-outline {
     background-color: transparent;
-    color: white;
+    color: white !important;
     border: 2px solid #ffffff;
 }
 
 .btn-outline:hover {
     background-color: white;
-    color: black; /* Inverte as cores no hover */
+    color: black !important;
 }
 
 /* Ajuste do ícone do WhatsApp */
 .btn-filled i {
     margin-right: 10px;
     font-size: 1.2rem;
+}
+
+.btn:visited {
+    color: white !important;
 }
 
 @media (max-width: 480px) {
