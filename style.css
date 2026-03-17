@@ -506,20 +506,35 @@ grid-template-columns:1fr 1fr;
 gap:40px;
 }
 
-.box-contato{
-display:flex;
-align-items:center;
-gap:15px;
-background:#0b1f3a;
-color:white;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
+.box-contato {
+    display: flex;
+    align-items: flex-start; /* Alinha o ícone no topo do texto */
+    gap: 20px;
+    background: #0b1f3a;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 100px; /* Garante um tamanho padrão para todas as caixas */
 }
 
-.box-contato i{
-font-size:22px;
-color:#ff2d2d;
+.box-contato div h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box-contato div p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Garante que os links dentro das caixas não fiquem azuis/sublinhados */
+.box-contato a {
+    color: white;
+    text-decoration: none;
 }
 
 .mapa-box iframe{
