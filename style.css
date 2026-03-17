@@ -431,7 +431,7 @@ body {
 
 .footer-logo {
     width: 100%;
-    max-width: 220px;
+    max-width: 300px; 
     height: auto;
     margin-bottom: 25px;
     display: block;
