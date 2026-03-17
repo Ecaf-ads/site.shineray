@@ -525,7 +525,7 @@ font-weight:bold;
 
 /* Seção Geral - VOLTANDO PARA O ESCURO */
 .modelos {
-    background-color: #0a0f1a; /* Fundo azul marinho bem escuro */
+    background-color: #ffffff; /* Fundo azul marinho bem escuro */
     padding: 80px 0;
     text-align: center;
 }
@@ -725,45 +725,40 @@ margin:15px 0;
     color: #cccccc;
 }
 
-/* Seção Sobre Shineray */
+/* Seção Sobre a Empresa - Fundo Escuro Original */
 .empresa {
     padding: 80px 0;
-    background: #0a0f1a; /* Azul marinho escuro original */
+    background: #0a0f1a; /* Azul-marinho escuro original */
 }
 
 .titulo-secao {
     text-align: center;
-    color: white;
+    color: white; /* Título Branco */
     font-size: 32px;
     margin-bottom: 50px;
 }
 
 .empresa-conteudo {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente */
     gap: 40px;
 }
 
 .empresa-texto {
-    flex: 1;
-    color: white;
+    flex: 1; /* Ocupa 50% da largura */
+    color: white; /* Texto Branco */
     font-size: 18px;
     line-height: 1.6;
+}
+
+.empresa-imagem {
+    flex: 1; /* Ocupa 50% da largura */
 }
 
 .empresa-imagem img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.aviso{
-
-font-size:14px;
-
-color:white;
-
-margin-top:15px;
-
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para destaque */
 }
 
 @media (max-width: 768px) {
@@ -807,65 +802,25 @@ margin-top:15px;
 /* Container Principal - Fundo Escuro */
 
 .secao-vantagens {
-
-    background-color: #0a0f1a; 
-
+    background-color: #0a0f1a;
     padding: 60px 0;
-
-    width: 100%;
-
 }
-
-
 
 .container-cards {
-
     display: flex;
-
+    flex-direction: row !important; /* Força lado a lado no desktop */
     justify-content: center;
-
     gap: 20px;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 0 20px;
-
 }
 
-
-
-/* O Card agora é escuro e alinhado à esquerda */
-
 .card-vantagem {
-
-    background-color: #1a1a1a; /* Cor escura do card */
-
-    flex: 1;
-
+    background-color: #1a1a1a;
+    flex: 1; /* Ocupa 1/3 da largura cada card */
     padding: 30px;
-
     border-radius: 10px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start; /* Alinha tudo à esquerda */
-
+    border: 2px solid transparent;
+    transition: 0.3s;
     text-align: left;
-
-    
-
-    /* Borda transparente para o efeito hover */
-
-    border: 2px solid transparent; 
-
-    transition: all 0.3s ease;
-
-    cursor: pointer;
-
 }
 
 
@@ -975,12 +930,9 @@ link-tel {
 
 
 
-.contato{
-
-background:white;
-
-padding:80px 0;
-
+.contato {
+    background: white;
+    padding: 80px 0;
 }
 
 
@@ -1010,39 +962,19 @@ margin-bottom:50px;
 
 
 .contato-grid {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-
     gap: 30px;
-
-    align-items: start; /* Alinha o topo das duas colunas */
-
+    align-items: start;
 }
 
 
 
 .box-contato {
-
-    display: flex;
-
-    align-items: flex-start; /* Alinha o ícone no topo do texto */
-
-    gap: 20px;
-
     background: #0b1f3a;
-
     color: white;
-
     padding: 25px;
-
     border-radius: 10px;
-
-    margin-bottom: 20px;
-
-    min-height: 100px; /* Garante um tamanho padrão para todas as caixas */
-
 }
 
 
@@ -1086,65 +1018,40 @@ margin-bottom:50px;
 
 
 .mapa-coluna {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 15px; /* Espaço entre o mapa e o botão */
-
+    gap: 15px;
 }
-
-
 
 .mapa-box iframe {
-
     width: 100%;
-
     border-radius: 10px;
-
-    display: block; /* Remove espaços vazios embaixo do iframe */
-
 }
-
-
 
 .btn-avaliacoes {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 10px;
-
-    background-color: #e60023; /* Vermelho */
-
-    color: white;
-
+    background-color: #e31d2d; /* Vermelho Shineray */
+    color: white !important;
     padding: 15px;
-
     border-radius: 8px;
-
-    text-decoration: none;
-
+    text-decoration: none !important;
     font-weight: bold;
-
-    transition: background 0.3s;
-
-    width: 100%;
-
+    transition: background 0.3s ease;
+    width: 100%; /* Ocupa a mesma largura do mapa */
+    border: none;
+    font-size: 16px;
 }
-
-
 
 .btn-avaliacoes:hover {
-
-    background-color: #b0001a;
-
+    background-color: #b01521;
 }
 
+.btn-avaliacoes i {
+    color: #ffc107; /* Cor dourada para a estrela */
+}
 
 
 @media (max-width: 768px) {
