@@ -450,25 +450,132 @@ padding:12px;
 cursor:pointer;
 }
 
-footer{
-background:#000;
-color:white;
-padding:25px 0;
-margin-top:40px;
+/* Configurações Gerais do Rodapé */
+.footer-site {
+    background-color: #111111; /* Fundo quase preto */
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    font-family: Arial, sans-serif;
 }
 
-.footer-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Para quebrar linha no celular */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-footer a{
-color:white;
-margin-left:15px;
-text-decoration:none;
+.footer-col {
+    flex: 1;
+    min-width: 200px;
 }
 
+/* Coluna Sobre / Logo */
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Estilo dos Títulos das Colunas */
+.footer-col h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Estilo dos Links */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #e31d2d;
+}
+
+/* Informações de Contato */
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.contact-info i {
+    color: #e31d2d; /* Ícones vermelhos */
+    margin-top: 3px;
+}
+
+/* Redes Sociais */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #e31d2d;
+}
+
+/* Linha Inferior */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info p, .social-icons {
+        justify-content: center;
+    }
+}
 .btn-whatsapp{
 display:inline-block;
 margin-top:15px;
