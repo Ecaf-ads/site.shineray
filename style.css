@@ -330,11 +330,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+   flex-wrap: wrap;
 }
 
 .card-vantagem {
     background-color: #111d2b;
     flex: 1;
+    min-width: 250px;
     padding: 40px 30px;
     border-radius: 12px;
     text-align: left;
