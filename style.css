@@ -47,45 +47,42 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content aqui não afetará os pesos flex, mas mantemos por segurança */
+    justify-content: space-between; 
     padding: 0 30px;
+    position: relative; /* Adicionado para controle absoluto se necessário */
 }
 
-/* ALINHAMENTO TRIPLO: Esquerda, Centro, Direita */
-
+/* Esquerda: Logo */
 .header-logo {
-    flex: 1; /* Ocupa espaço na esquerda */
+    flex: 1; 
     display: flex;
     justify-content: flex-start;
 }
 
-.header-nav {
-    flex: 2; /* Ocupa mais espaço para garantir a centralização real */
-    display: flex;
-    justify-content: center; /* CENTRALIZA O MENU AQUI */
-}
-
+/* DIREITA: Botão */
 .header-botao {
-    flex: 1; /* Ocupa espaço na direita */
+    flex: 1; 
     display: flex;
     justify-content: flex-end;
 }
 
-/* Estilo da Logo */
-.header-logo img {
-    height: 60px; 
-    width: auto;
-    object-fit: contain;
-    display: block;
+/* CENTRO: Onde o ajuste acontece */
+.header-nav {
+    flex: 2; /* Ocupa o dobro de espaço das pontas para garantir o centro */
+    display: flex;
+    justify-content: center; /* Centraliza os links dentro desse espaço */
 }
 
-/* Estilo do Menu (Navegação) */
 .header-nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0;
+    padding: 0;
+    /* Remova qualquer margin-right ou padding-right que tenhamos colocado antes */
+    margin-right: 0; 
 }
-
 .header-nav ul li a {
     color: white;
     text-decoration: none;
