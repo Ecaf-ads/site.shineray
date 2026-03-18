@@ -263,5 +263,40 @@
    target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
+    
+<div id="cookie-banner" class="cookie-container">
+    <div class="cookie-content">
+        <p>Usamos cookies para garantir que você tenha a melhor experiência no nosso site. Ao continuar navegando, você concorda com a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+        <div class="cookie-botoes">
+            <button id="btn-aceitar-cookies" class="btn-cookie-aceitar">Aceitar Todos</button>
+            <button id="btn-recusar-cookies" class="btn-cookie-recusar">Recusar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var banner = document.getElementById("cookie-banner");
+        var btnAceitar = document.getElementById("btn-aceitar-cookies");
+        var btnRecusar = document.getElementById("btn-recusar-cookies");
+
+        // Mostra o banner apenas se o cliente ainda não escolheu
+        if (!localStorage.getItem("cookiesEscolha")) {
+            banner.style.display = "block"; 
+        }
+
+        // Se clicar em Aceitar Todos
+        btnAceitar.addEventListener("click", function() {
+            localStorage.setItem("cookiesEscolha", "aceito");
+            banner.style.display = "none";
+        });
+
+        // Se clicar em Recusar
+        btnRecusar.addEventListener("click", function() {
+            localStorage.setItem("cookiesEscolha", "recusado");
+            banner.style.display = "none";
+        });
+    });
+</script>
 
 </body> </html>
