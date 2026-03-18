@@ -513,9 +513,79 @@ body {
     .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 40px; }
     .footer-col { width: 100%; padding: 0; }
     .social-icons, .contact-info p { justify-content: center; }
-   .footer-logo {margin: 0 auto 25px auto !important; /}
+    .footer-logo { margin: 0 auto 25px auto !important; } /* <-- Removi a barra (/) que estava sobrando aqui */
 }
 
+/* ============================================================
+   PÁGINAS LEGAIS (POLÍTICA E TERMOS)
+   ============================================================ */
+.pagina-legal {
+    padding: 150px 0 80px 0; /* Espaço em cima para o menu fixo não cobrir o título */
+    background-color: #000000; /* Fundo preto padrão do site */
+}
+
+.box-legal {
+    background-color: #0b1f3a; /* Azul marinho da marca */
+    padding: 50px;
+    border-radius: 12px;
+    color: #cccccc; /* Texto cinza claro para não cansar a vista */
+    line-height: 1.8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.box-legal h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #e31d2d; /* Linha vermelha de destaque abaixo do título */
+    padding-bottom: 15px;
+}
+
+.box-legal h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.box-legal p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.box-legal strong {
+    color: #ffffff;
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    background-color: #e31d2d;
+    color: #ffffff !important;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #b01521;
+}
+
+/* Ajuste Responsivo para Celular */
+@media (max-width: 768px) {
+    .box-legal {
+        padding: 30px 20px;
+    }
+    .box-legal h1 {
+        font-size: 2rem;
+    }
+}
 /* ============================================================
    9. ELEMENTOS ADICIONAIS E AUXILIARES
    ============================================================ */
