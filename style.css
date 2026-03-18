@@ -654,3 +654,96 @@ button { background: #e60023; color: white; border: none; padding: 12px; cursor:
         font-size: 30px;
     }
 }
+
+/* ============================================================
+   BANNER DE COOKIES LGPD
+   ============================================================ */
+.cookie-container {
+    display: none; /* Fica invisível até o Script decidir mostrar */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0b1f3a; /* Azul marinho da marca */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5); 
+    z-index: 10001; /* Fica em cima de tudo */
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.cookie-content a {
+    color: #e31d2d; /* Link vermelho */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cookie-botoes {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0; 
+}
+
+/* Botão Vermelho de Aceitar */
+.btn-cookie-aceitar {
+    background-color: #e31d2d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cookie-aceitar:hover {
+    background-color: #b01521;
+}
+
+/* Botão Transparente de Recusar */
+.btn-cookie-recusar {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cookie-recusar:hover {
+    background-color: #ffffff;
+    color: #0b1f3a;
+}
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-botoes {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-cookie-aceitar, .btn-cookie-recusar {
+        width: 100%;
+    }
+}
